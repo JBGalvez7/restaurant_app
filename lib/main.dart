@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Restaurant Menu',
-      theme: ThemeData(primarySwatch: Colors.red),
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        scaffoldBackgroundColor: const Color.fromARGB(255, 230, 162, 106),
+      ),
       home: const MenuListScreen(),
     );
   }

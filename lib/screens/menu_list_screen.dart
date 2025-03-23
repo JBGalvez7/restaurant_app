@@ -5,15 +5,20 @@ class MenuListScreen extends StatelessWidget {
   const MenuListScreen({super.key});
 
   final List<Map<String, String>> menuItems = const [
-    {'name': 'Pizza', 'image': 'assets/images/pizza.jpg'},
-    {'name': 'Burger', 'image': 'assets/images/burger.jpg'},
-    {'name': 'Pasta', 'image': 'assets/images/pasta.jpg'},
+    {'name': 'Pork Sinigang', 'image': 'assets/images/pork_sinigang.jpg'},
+    {'name': 'Adobo', 'image': 'assets/images/adobo.jpg'},
+    {'name': 'Pork Sisig', 'image': 'assets/images/pork_sisig.jpg'},
+    {'name': 'Pinakbet', 'image': 'assets/images/pinakbet.jpg'},
+    {'name': 'Halo-Halo', 'image': 'assets/images/halohalo.jpg'},
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Menu')),
+      appBar: AppBar(
+        title: const Text('Menu'),
+        backgroundColor: const Color.fromARGB(255, 185, 96, 12),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView.builder(

@@ -8,6 +8,33 @@ class FoodDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String description;
+
+    switch (name) {
+      case 'Pork Sinigang':
+        description =
+            'A savory and tangy pork soup made with tender pork, tamarind, and fresh vegetables. A comforting Filipino classic!';
+        break;
+      case 'Adobo':
+        description =
+            'A rich and flavorful dish of pork or chicken braised in soy sauce, vinegar, garlic, and aromatic spices. A Filipino favorite!';
+        break;
+      case 'Pork Sisig':
+        description =
+            'A sizzling, crispy, and flavorful dish made with seasoned chopped pork, onions, chili, and a splash of calamansi.';
+        break;
+      case 'Pinakbet':
+        description =
+            'A nutritious vegetable stew infused with shrimp paste, featuring a colorful mix of eggplant, bitter melon, and squash.';
+        break;
+      case 'Halo-Halo':
+        description =
+            'A refreshing and vibrant dessert made with crushed ice, sweetened fruits, jelly, and topped with creamy ube ice cream.';
+        break;
+      default:
+        description = 'Enjoy your delicious $name!';
+    }
+
     return Scaffold(
       appBar: AppBar(title: Text(name)),
       body: Center(
@@ -21,9 +48,32 @@ class FoodDetailsScreen extends StatelessWidget {
               child: Image.asset(image, fit: BoxFit.cover),
             ),
             const SizedBox(height: 20),
-            Text(
-              'Enjoy your delicious $name!',
-              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Container(
+                padding: const EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(color: Colors.grey, width: 1.5),
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black12,
+                      blurRadius: 6,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: Text(
+                  description,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black87,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
             ),
             const SizedBox(height: 20),
             ElevatedButton(

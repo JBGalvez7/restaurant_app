@@ -54,7 +54,11 @@ flutter:
   assets:
     - assets/images/pizza.jpg
     - assets/images/burger.jpg
-    - assets/images/pasta.jpg
+    - assets/images/adobo.jpg
+    - assets/images/pork_sinigang.jpg
+    - assets/images/halohalo.jpg
+    - assets/images/pork_sisig.jpg
+    - assets/images/pinakbet.jpg
 
 
   # The following line ensures that the Material Icons font is
